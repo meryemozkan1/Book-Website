@@ -2,6 +2,10 @@
 
 BookShop is a responsive online bookstore demo where readers can explore a curated book collection, browse categories, and manage a shopping basket.
 
+## Live Demo
+
+Visit the live site: [BookShop on GitHub Pages](https://meryemozkan1.github.io/Book-Website/)
+
 ## Features
 
 - Browse a catalog of books with cover images, descriptions, ratings, and prices.

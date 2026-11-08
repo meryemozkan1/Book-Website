@@ -8,10 +8,15 @@
       name="description"
       content="Discover your next favorite book at BookShop, your online bookstore and library."
     />
-    <link rel="icon" type="image/svg+xml" href="./assets/bookshop-icon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/bookshop-favicon.svg?v=20261108-4"
+      sizes="any"
+    />
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/toastr/toastr.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css?v=20261108-4" />
   </head>
   <body>
     <nav class="navbar">
@@ -82,22 +87,41 @@
       </ul>
       <div class="book-list" aria-live="polite"></div>
     </section>
-    <section class="info-section" id="audiobooks">
-      <span class="section-eyebrow">Listen anywhere</span>
-      <h2>Make room for a good story.</h2>
-      <p>Our audiobook collection is coming soon. Check back for stories worth listening to.</p>
-    </section>
-    <section class="info-section info-section-accent" id="gifts">
-      <span class="section-eyebrow">A thoughtful gift</span>
-      <h2>Give the gift of a great read.</h2>
-      <p>Browse the collection and find a book for every reader and every occasion.</p>
-      <a class="text-link" href="#books">Explore books <span aria-hidden="true">→</span></a>
-    </section>
-    <section class="info-section" id="about">
-      <span class="section-eyebrow">About BookShop</span>
-      <h2>A little more joy on every shelf.</h2>
-      <p>BookShop brings stories, ideas, and readers together with a hand-picked collection for curious minds.</p>
-    </section>
+    <div class="info-sections" id="info-sections" hidden>
+      <section class="info-section" id="audiobooks" hidden>
+        <div class="info-section-content">
+          <span class="section-icon" aria-hidden="true"><i class="bi bi-headphones"></i></span>
+          <div>
+            <span class="section-eyebrow">Coming soon</span>
+            <h2>Listen to your next great story.</h2>
+            <p>We are preparing an audiobook collection for your next commute, walk, or quiet moment. In the meantime, find your next read in our book collection.</p>
+            <a class="text-link" href="#books">Browse the book collection <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="info-section info-section-accent" id="gifts" hidden>
+        <div class="info-section-content">
+          <span class="section-icon" aria-hidden="true"><i class="bi bi-gift"></i></span>
+          <div>
+            <span class="section-eyebrow">A thoughtful gift</span>
+            <h2>Give the gift of a great read.</h2>
+            <p>Choose a story, a new perspective, or a favorite classic for the reader in your life.</p>
+            <a class="text-link" href="#books">Find a book to gift <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="info-section" id="about" hidden>
+        <div class="info-section-content">
+          <span class="section-icon" aria-hidden="true"><i class="bi bi-book"></i></span>
+          <div>
+            <span class="section-eyebrow">About BookShop</span>
+            <h2>A little more joy on every shelf.</h2>
+            <p>BookShop brings stories, ideas, and readers together with a hand-picked collection for curious minds.</p>
+            <a class="text-link" href="#books">Explore BookShop <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
     <div class="basket-modal">
       <div class="basket-items">
         <i class="bi bi-x" onclick="toggleModal()"></i>
@@ -118,6 +142,6 @@
     ></script>
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/toastr/toastr.min.js"></script>
-    <script src="app.js"></script>
+    <script src="./app.js?v=20261108-4"></script>
   </body>
 </html>

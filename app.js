@@ -33,6 +33,46 @@ const toggleModal = () => {
   document.querySelector(".basket-modal").classList.toggle("active");
 };
 
+const setNavigationSection = (sectionId, { scroll = false, updateHistory = false } = {}) => {
+  const infoSection = document.getElementById(sectionId);
+  const isInfoSection = infoSection?.classList.contains("info-section") ?? false;
+  const infoSectionsEl = document.querySelector(".info-sections");
+
+  infoSectionsEl.hidden = !isInfoSection;
+  document.querySelectorAll(".info-section").forEach((section) => {
+    section.hidden = section !== infoSection;
+  });
+  document.querySelectorAll(".menu a").forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${sectionId}`;
+    link.classList.toggle("active", isActive);
+    if (isActive) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+
+  if (updateHistory && window.location.hash !== `#${sectionId}`) {
+    window.history.pushState(null, "", `#${sectionId}`);
+  }
+  if (scroll) {
+    const target = isInfoSection ? infoSectionsEl : document.getElementById("books");
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
+document.querySelectorAll(".menu a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    setNavigationSection(link.hash.slice(1), { scroll: true, updateHistory: true });
+  });
+});
+
+window.addEventListener("popstate", () => {
+  setNavigationSection(window.location.hash.slice(1) || "books", { scroll: true });
+});
+
+setNavigationSection(window.location.hash.slice(1) || "books", {
+  scroll: Boolean(window.location.hash),
+});
+
 const createBookStars = (starRate) => {
   let starRateHtml = "";
   for (let i = 1; i <= 5; i++) {

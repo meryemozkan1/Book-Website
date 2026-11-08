@@ -1,25 +1,52 @@
-﻿<h1> E-Commerce-Books-Website </h1>
-<hr>
-Bu proje, kullanıcıların çeşitli kitapları inceleyebileceği, satın alabileceği ve kendi koleksiyonlarına ekleyebileceği bir kitap satış platformudur. Projenin amacı, kitap severlerin ihtiyaçlarını karşılayacak kullanıcı dostu bir online kitap mağazası sunmaktır.<br>
+# BookShop
 
-<h1> Özellikler </h1>
-<hr>
+BookShop is a responsive online bookstore demo where readers can explore a curated book collection, browse categories, and manage a shopping basket.
 
-- _Kullanıcı Kayıt ve Giriş_: Kullanıcılar, hesap oluşturabilir ve mevcut hesaplarıyla giriş yapabilirler.<br>
+## Features
 
-- _Kitap İnceleme ve Arama_: Kullanıcılar, kitapları kategoriye, yazara veya başlığa göre arayabilir ve detaylarını inceleyebilirler.<br>
+- Browse a catalog of books with cover images, descriptions, ratings, and prices.
+- Filter books by category.
+- Add books to a basket, adjust quantities, and remove items.
+- View the basket item count and order total.
+- Navigate between the Books, Audiobooks, Gifts, and About sections.
+- Responsive layout for desktop and mobile screens.
 
-- _Alışveriş Sepeti_: Kullanıcılar, beğendikleri kitapları alışveriş sepetine ekleyebilir ve toplu olarak satın alabilirler.<br>
+## Built With
 
-<h1> Kullanılan Teknolojiler </h1>
-<hr>
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- jQuery
+- Toastr
 
-- HTML5 <br>
+## Run Locally
 
-- Css <br>
+BookShop loads its catalog from `products.json` using `fetch`. Open the project through a local web server rather than directly as a `file://` URL.
 
-- JavaScript <br>
+For example, with Python installed:
 
-<h1> Ekran Görüntüsü </h1>
+```bash
+python -m http.server 8000
+```
 
-![](Books.Web.gif)
+Then visit [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Project Structure
+
+```text
+.
+├── assets/
+│   ├── images/
+│   ├── bootstrap/
+│   ├── jquery/
+│   └── toastr/
+├── app.js
+├── index.html
+├── products.json
+└── style.css
+```
+
+## Preview
+
+![BookShop preview](Books.Web.gif)

@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Shop</title>
+    <title>BookShop | Online Bookstore &amp; Library</title>
+    <meta
+      name="description"
+      content="Discover your next favorite book at BookShop, your online bookstore and library."
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/bookshop-icon.svg" />
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/toastr/toastr.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
-      <h2 class="title">BookShop</h2>
+      <a class="title" href="#books" aria-label="BookShop home">BookShop</a>
       <ul class="menu">
-        <li class="active">Books</li>
-        <li>AUDIOBOOKS</li>
-        <li>GIFTS</li>
-        <li>ABOUT</li>
+        <li><a class="active" href="#books">Books</a></li>
+        <li><a href="#audiobooks">Audiobooks</a></li>
+        <li><a href="#gifts">Gifts</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
       <ul class="menu-icons">
         <li><i class="bi bi-person"></i></li>
@@ -70,15 +75,28 @@
         </button>
       </div>
     </section>
-    <section class="store my-5">
+    <section class="store my-5" id="books" aria-label="Book catalog">
       <div class="filter-bg"></div>
-      <ul class="filter">
+      <ul class="filter" aria-label="Filter books by category">
         <li class="active">Tümü</li>
-        <li>Roman</li>
-        <li>Kisisel Gelisim</li>
-        <li>Fantastik</li>
       </ul>
-      <div class="row book-list"></div>
+      <div class="book-list" aria-live="polite"></div>
+    </section>
+    <section class="info-section" id="audiobooks">
+      <span class="section-eyebrow">Listen anywhere</span>
+      <h2>Make room for a good story.</h2>
+      <p>Our audiobook collection is coming soon. Check back for stories worth listening to.</p>
+    </section>
+    <section class="info-section info-section-accent" id="gifts">
+      <span class="section-eyebrow">A thoughtful gift</span>
+      <h2>Give the gift of a great read.</h2>
+      <p>Browse the collection and find a book for every reader and every occasion.</p>
+      <a class="text-link" href="#books">Explore books <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="info-section" id="about">
+      <span class="section-eyebrow">About BookShop</span>
+      <h2>A little more joy on every shelf.</h2>
+      <p>BookShop brings stories, ideas, and readers together with a hand-picked collection for curious minds.</p>
     </section>
     <div class="basket-modal">
       <div class="basket-items">
